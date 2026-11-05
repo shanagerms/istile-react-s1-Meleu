@@ -1,0 +1,57 @@
+*, *::before, *::after { box-sizing: border-box; } 
+  
+:root { 
+  --bleu: #1f3a5f; 
+  --vert: #0e7c86; 
+  --fond: #f5f7fa; 
+} 
+  
+body { 
+  margin: 0; 
+  font-family: system-ui, Arial, sans-serif; 
+  line-height: 1.5; 
+  background: var(--fond); 
+  color: #222; 
+} 
+  
+/* En-tête : colonne sur téléphone */ 
+.entete { 
+  display: flex; flex-direction: column; gap: 0.75rem; 
+  padding: 1rem; background: var(--bleu); color: #fff; 
+} 
+ Support de cours S1 :  Programmation Web moderne avec React JS 
+ISTILE :@Freddy Mbarga: Année académique 2026–2027 Page 18 
+.logo { font-size: 1.4rem; font-weight: 700; color: #fff; text-decoration: none; } 
+.logo span { color: #7fd6dd; } 
+.menu { display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; } 
+.menu a { color: #fff; } 
+  
+.hero { padding: 2rem 1rem; text-align: center; background: #fff; } 
+.hero h1 { margin: 0 0 0.5rem; color: var(--bleu); font-size: 1.6rem; } 
+  
+.contenu { padding: 1.5rem 1rem; max-width: 1100px; margin: 0 auto; } 
+  
+/* Grille adaptative des cartes */ 
+.liste { 
+  display: grid; gap: 1rem; 
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+} 
+.carte { 
+  background: #fff; padding: 1rem; border-radius: 0.5rem; 
+  border: 1px solid #dde3ea; 
+} 
+.carte h3 { margin: 0 0 0.25rem; color: var(--bleu); } 
+.carte p { margin: 0 0 0.5rem; word-break: break-word; } 
+.badge { 
+  display: inline-block; padding: 0.15rem 0.6rem; border-radius: 999px; 
+  background: var(--vert); color: #fff; font-size: 0.8rem; 
+} 
+  
+.pied { padding: 1rem; text-align: center; background: var(--bleu); color: #fff; } 
+  
+/* Écrans plus larges : en-tête sur une ligne */ 
+@media (min-width: 768px) { 
+  .entete { flex-direction: row; justify-content: space-between; align-items: center; padding: 1rem 2rem; } 
+  .hero h1 { font-size: 2.2rem; } 
+} 
+ 
